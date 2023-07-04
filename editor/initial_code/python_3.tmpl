@@ -2,14 +2,14 @@
 {% block env %}{% endblock env %}
 
 {% block start %}
-def count_squares(points: list[list[int]]) -> int:
+def count_squares(points: list[tuple[int, int]]) -> int:
     # your code here
     return 0
 {% endblock start %}
 
 {% block example %}
 print('Example:')
-print(count_squares([[0, 0], [1, 0], [0, 1], [1, 1]]))
+print(count_squares([(0, 0), (1, 0), (0, 1), (1, 1)]))
 {% endblock %}
 
 # These "asserts" are used for self-checking
