@@ -4,7 +4,7 @@
     This problem is adapted from <a target="_blank" href="https://challenges.wolframcloud.com/challenge/count-the-number-of-squares">Count the Number of Squares</a> at Wolfram Challenges, so you might want to first check out that page for illustrative visualizations of this problem.
 </p>
 <p style="text-align: justify;">
-    Given a sequence of points (coordinates <b class="code">x, y</b> as nonnegative integers), your function should count how many squares exist so that all four corners are members of points. Note that these squares are not required to be axis-aligned so that their sides would have to be either horizontal and vertical. For example, the points <b class="code">(0, 3), (3, 0), (6, 3), (3, 6)</b>  define a square, even if it may happen to look like a lozenge from our axis-aligned vantage point. 
+    Given a sequence of points (coordinates <b class="code">x, y</b> as nonnegative integers), your function should count how many squares exist so that all four corners are members of points. Note that these squares are not required to be axis-aligned so that their sides would have to be either horizontal and vertical. For example, the points <b class="code">{% if is_js %}[0, 3], [3, 0], [6, 3], [3, 6]{% else %}(0, 3), (3, 0), (6, 3), (3, 6){% endif %}</b> define a square, even if it may happen to look like a lozenge from our axis-aligned vantage point. 
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input:</strong> <span translate="repeat">{% if is_js %}Array{% else %}List{% endif %}</span> of {% if is_js %}arrays{% else %}lists{% endif %} of two integers (<span translate="no">{% if is_js %}number{% else %}int{% endif %}</span>).
+    <strong>Input:</strong> <span translate="repeat">{% if is_js %}Array{% else %}List{% endif %}</span> of tuples <span translate="no">{% if is_js %}{% else %}(tuple){% endif %}</span> of two integers (<span translate="no">{% if is_js %}number{% else %}int{% endif %}</span>).
 </p>
 
 <p>
@@ -34,7 +34,7 @@
 <details>
     <summary><i>If you feel yourself in need of additional chapter of explanation (tip), press this line.</i></summary>
     <p style="text-align: justify;"><i>
-        To identify four points that constitute a square, note how every square has bottom left corner point <b class="code">x, y</b> and direction vector <b class="code">dx, dy</b>   towards its upper left corner point that satisfies <b class="code">dx >= 0 & dy > 0</b>, so that the points <b class="code">(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy)</b> for the top left, bottom right and top right corners of that square, respectively, are also included in points. You can therefore (effectively) iterate through all possibilities for the bottom left point and the direction vector and be guaranteed to find all squares in the grid.
+        To identify four points that constitute a square, note how every square has bottom left corner point <b class="code">x, y</b> and direction vector <b class="code">dx, dy</b>   towards its upper left corner point that satisfies <b class="code">dx >= 0 & dy > 0</b>, so that the points <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b> for the top left, bottom right and top right corners of that square, respectively, are also included in points. You can therefore (effectively) iterate through all possibilities for the bottom left point and the direction vector and be guaranteed to find all squares in the grid.
     </i></p>
 </details>
 
