@@ -1,0 +1,20 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何开始解决这个任务。
+    </div>
+    <div class="answer">
+        <p>
+            抓住一个思路💡！要确定构成正方形的四个点，请注意每个正方形都有左下角点<b class="code">x, y</b> 和朝向其左上角点的方向向量<b class="code">dx, dy</b> ，该向量满足<b class="code">dx>= 0 & dy> 0</b> ，因此该正方形的左上角点、右下角点和右上角点也分别包含在点中。 <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b>因此，该正方形的左上角点、右下角点和右上角点也包含在点中。因此，您可以（有效地）遍历左下角点和方向向量的所有可能性，并保证找到网格中的所有正方形。
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        谢谢！我现在知道并理解得更多了！一切正常！
+    </div>
+    <div class="answer">
+        很高兴听到这个消息 👍！
+    </div>
+</div>
+</body>
