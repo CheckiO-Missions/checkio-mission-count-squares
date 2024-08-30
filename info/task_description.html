@@ -31,12 +31,6 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<details>
-    <summary><i>If you feel yourself in need of additional chapter of explanation (tip), press this line.</i></summary>
-    <p style="text-align: justify;"><i>
-        To identify four points that constitute a square, note how every square has bottom left corner point <b class="code">x, y</b> and direction vector <b class="code">dx, dy</b>   towards its upper left corner point that satisfies <b class="code">dx >= 0 & dy > 0</b>, so that the points <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b> for the top left, bottom right and top right corners of that square, respectively, are also included in points. You can therefore (effectively) iterate through all possibilities for the bottom left point and the direction vector and be guaranteed to find all squares in the grid.
-    </i></p>
-</details>
 
 <p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
 <!-- Here you can explain how it can be used in development -->

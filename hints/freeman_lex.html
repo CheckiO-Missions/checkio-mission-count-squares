@@ -1,0 +1,20 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        I have no idea how to start solving this mission.
+    </div>
+    <div class="answer">
+        <p>
+            Catch an idea 💡! To identify four points that constitute a square, note how every square has bottom left corner point <b class="code">x, y</b> and direction vector <b class="code">dx, dy</b>   towards its upper left corner point that satisfies <b class="code">dx >= 0 & dy > 0</b>, so that the points <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b> for the top left, bottom right and top right corners of that square, respectively, are also included in points. You can therefore (effectively) iterate through all possibilities for the bottom left point and the direction vector and be guaranteed to find all squares in the grid.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Thanks! I know and understand more now! Everything works fine!
+    </div>
+    <div class="answer">
+        Glad to hear it 👍!
+    </div>
+</div>
+</body>

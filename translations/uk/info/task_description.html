@@ -31,12 +31,7 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<details>
-    <summary><i>Якщо ви вважаєте, що вам потрібна додаткова глава пояснень (підказка), натисніть цей рядок.</i></summary>
-    <p style="text-align: justify;"><i>
-        Щоб визначити чотири точки, які утворюють квадрат, зверніть увагу на те, що кожен квадрат має точку лівого нижнього кута <b class="code">x, y</b> і вектор напрямку <b class="code">dx, dy</b> до точки лівого верхнього кута, який задовольняє <b class="code">dx>= 0 & dy> 0</b>, так що точки <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b> для лівого верхнього, правого нижнього та правого верхнього кутів квадрата, відповідно, також є точками. Таким чином, ви можете (ефективно) перебрати всі можливі варіанти нижньої лівої точки і вектора напрямку і гарантовано знайти всі квадрати в сітці.
-    </i></p>
-</details>
+
 
 <p><i>Завдання взято з сайту <span>Python CCPS 109</span>. Його розв'язують для <span>Ryerson Chang School of Continuing Education</span> за допомогою <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
 <!-- Here you can explain how it can be used in development -->

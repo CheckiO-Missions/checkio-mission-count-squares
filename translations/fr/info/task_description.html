@@ -31,12 +31,7 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<details>
-    <summary><i>Si vous avez besoin d'un chapitre d'explication supplémentaire (tip), appuyez sur cette ligne.</i></summary>
-    <p style="text-align: justify;"><i>
-        Pour identifier les quatre points qui constituent un carré, notez que chaque carré possède un point d'angle inférieur gauche <b class="code">x, y</b> et un vecteur de direction <b class="code">dx, dy</b> vers son point d'angle supérieur gauche qui satisfait à <b class="code">dx>= 0 & dy> 0</b>, de sorte que les points <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b> pour les coins supérieur gauche, inférieur droit et supérieur droit de ce carré, respectivement, sont également inclus dans les points. Vous pouvez donc (effectivement) itérer à travers toutes les possibilités pour le point inférieur gauche et le vecteur de direction et être assuré de trouver tous les carrés de la grille.
-    </i></p>
-</details>
+
 
 <p><i>La mission est tirée de <span>Python CCPS 109</span>. Elle est enseignée pour <span>Ryerson Chang School of Continuing Education</span> par <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
 <!-- Here you can explain how it can be used in development -->

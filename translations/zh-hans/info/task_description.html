@@ -31,12 +31,7 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<details>
-    <summary><i>如果您觉得自己需要额外的解释（提示），请按这一行。</i></summary>
-    <p style="text-align: justify;"><i>
-        要确定构成正方形的四个点，请注意每个正方形都有左下角点<b class="code">x, y</b> 和朝向其左上角点的方向向量<b class="code">dx, dy</b> ，且满足<b class="code">dx>= 0 & dy> 0</b> ，因此该正方形的左上角点、右下角点和右上角点也分别包含在点中。 <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b>因此，该正方形的左上角点、右下角点和右上角点也包含在点中。因此，您可以（有效地）遍历左下角点和方向向量的所有可能性，并保证找到网格中的所有正方形。
-    </i></p>
-</details>
+
 
 <p><i>该任务摘自<span>Python CCPS 109</span> 。它由<span>Ryerson Chang School of Continuing Education</span> 教授。<a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
 <!-- Here you can explain how it can be used in development -->
