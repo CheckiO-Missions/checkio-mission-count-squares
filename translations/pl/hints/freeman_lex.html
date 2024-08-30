@@ -1,0 +1,20 @@
+<body data-author="freeman_lex">
+<div class="question-answer">
+    <div class="question">
+        Nie mam pojęcia, jak zacząć rozwiązywać tę misję.
+    </div>
+    <div class="answer">
+        <p>
+            Proszę złapać jakiś pomysł 💡! Aby zidentyfikować cztery punkty, które tworzą kwadrat, proszę zauważyć, że każdy kwadrat ma lewy dolny punkt narożny <b class="code">x, y</b> i wektor kierunku <b class="code">dx, dy</b> w kierunku jego lewego górnego punktu narożnego, który spełnia <b class="code">dx>= 0 & dy> 0</b>, więc punkty <b class="code">{% if is_js %}[x+dx,y+dy], [x+dy,y-dx], [x+dx+dy,y-dx+dy]{% else %}(x+dx,y+dy), (x+dy,y-dx), (x+dx+dy,y-dx+dy){% endif %}</b> dla odpowiednio lewego górnego, prawego dolnego i prawego górnego rogu tego kwadratu są również zawarte w punktach. Można zatem (efektywnie) iterować przez wszystkie możliwości dla lewego dolnego punktu i wektora kierunku i mieć gwarancję znalezienia wszystkich kwadratów w siatce.
+        </p>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Dzięki! Teraz wiem i rozumiem więcej! Wszystko działa dobrze!
+    </div>
+    <div class="answer">
+        Miło mi to słyszeć 👍!
+    </div>
+</div>
+</body>
